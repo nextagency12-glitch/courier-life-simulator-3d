@@ -1,0 +1,32 @@
+{
+  "background_color": "#0f1419",
+  "description": "Simulator kurir 3D: ambil paket di gudang, antar ke pelanggan, terima COD, dan naik level.",
+  "display": "standalone",
+  "icons": [
+    {
+      "purpose": "any",
+      "sizes": "192x192",
+      "src": "icon-192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "any",
+      "sizes": "512x512",
+      "src": "icon-512.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "icon-512.png",
+      "type": "image/png"
+    }
+  ],
+  "lang": "id",
+  "name": "Courier Life Simulator 3D",
+  "orientation": "any",
+  "scope": "./",
+  "short_name": "Courier 3D",
+  "start_url": "./index.html",
+  "theme_color": "#0f1419"
+}
