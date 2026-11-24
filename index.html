@@ -31,55 +31,60 @@ button{font-family:inherit;cursor:pointer}
 .hud .card{pointer-events:auto}
 .topbar{top:calc(10px + env(safe-area-inset-top));left:10px;right:10px;display:flex;gap:8px;align-items:flex-start;justify-content:space-between}
 .stats{display:flex;gap:6px;flex-wrap:wrap}
-.chip{background:var(--hud);color:var(--hud-ink);border-radius:999px;padding:7px 11px;font-size:12.5px;font-weight:700;display:flex;gap:6px;align-items:center;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14)}
+.chip{background:var(--hud);color:var(--hud-ink);border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700;display:flex;gap:5px;align-items:center;backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,.14)}
 .chip small{font-weight:600;opacity:.75}
-.iconBtn{width:44px;height:44px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:var(--hud);color:#fff;font-size:19px;display:grid;place-items:center}
-.mission{top:calc(64px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(560px,calc(100% - 20px))}
-.missionCard{background:var(--panel);border-radius:var(--radius);padding:10px 14px;box-shadow:0 10px 30px rgba(0,0,0,.28);border:1px solid var(--line)}
-.missionCard .step{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--brand)}
-.missionCard .title{font-size:15px;font-weight:800;margin:2px 0}
-.missionCard .desc{font-size:12.5px;color:var(--muted);line-height:1.45}
-.missionCard .bar{height:6px;background:var(--panel2);border-radius:99px;margin-top:8px;overflow:hidden}
+.iconBtn{width:38px;height:38px;border-radius:11px;border:1px solid rgba(255,255,255,.18);background:var(--hud);color:#fff;font-size:16px;display:grid;place-items:center}
+.mission{top:calc(54px + env(safe-area-inset-top));left:50%;transform:translateX(-50%);width:min(420px,calc(100% - 20px))}
+.missionCard{background:var(--panel);border-radius:13px;padding:7px 12px 8px;box-shadow:0 6px 18px rgba(0,0,0,.22);border:1px solid var(--line)}
+.mHead{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.missionCard .step{font-size:10px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;color:var(--brand);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mDist{font-size:12px;font-weight:800;color:var(--brand);white-space:nowrap}
+.missionCard .title{font-size:13.5px;font-weight:800;margin:1px 0 0;line-height:1.25;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.missionCard .desc{font-size:11.5px;color:var(--muted);line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mFoot{display:flex;align-items:center;gap:10px;margin-top:5px}
+.mFoot .tgt{font-size:11.5px;font-weight:700;white-space:nowrap}
+.missionCard .bar{flex:1;height:4px;background:var(--panel2);border-radius:99px;overflow:hidden}
 .missionCard .bar i{display:block;height:100%;background:var(--brand);border-radius:99px;transition:width .4s}
-.distRow{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-top:6px}
-.distRow span:last-child{color:var(--brand)}
-#minimapWrap{top:calc(64px + env(safe-area-inset-top));right:10px;width:104px}
-#minimap{background:rgba(10,20,16,.85);border-radius:14px;border:1px solid rgba(255,255,255,.2);width:104px;height:104px}
-.speedo{bottom:calc(118px + env(safe-area-inset-bottom));right:12px;text-align:center}
-.speedo .dial{background:var(--hud);color:#fff;border-radius:16px;padding:8px 14px;border:1px solid rgba(255,255,255,.15)}
-.speedo b{font-size:26px;line-height:1}
-.speedo small{display:block;font-size:11px;opacity:.75;font-weight:700}
+#minimapWrap{top:calc(54px + env(safe-area-inset-top));right:10px;width:86px}
+#minimap{background:rgba(10,20,16,.85);border-radius:12px;border:1px solid rgba(255,255,255,.2);width:86px;height:86px}
+.speedo{bottom:calc(112px + env(safe-area-inset-bottom));right:12px;text-align:center}
+.speedo .dial{background:var(--hud);color:#fff;border-radius:13px;padding:6px 11px;border:1px solid rgba(255,255,255,.15)}
+.speedo b{font-size:20px;line-height:1}
+.speedo small{display:block;font-size:10px;opacity:.75;font-weight:700}
 .fuelbar{height:6px;background:rgba(255,255,255,.2);border-radius:99px;margin-top:6px;overflow:hidden}
 .fuelbar i{display:block;height:100%;background:var(--amber)}
 /* Controls */
 .controls{position:absolute;left:0;right:0;bottom:0;z-index:6;display:flex;justify-content:space-between;align-items:flex-end;padding:12px 12px calc(12px + env(safe-area-inset-bottom));pointer-events:none}
-#joyBase{pointer-events:auto;width:128px;height:128px;border-radius:50%;background:rgba(10,16,22,.35);border:1.5px solid rgba(255,255,255,.35);position:relative;touch-action:none;backdrop-filter:blur(3px)}
-#joyKnob{position:absolute;width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.92);left:36px;top:36px;box-shadow:0 4px 14px rgba(0,0,0,.35);display:grid;place-items:center;font-size:18px;color:#333}
-.btnCol{pointer-events:auto;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
-.btnRow{display:flex;gap:10px}
-.ctlBtn{min-width:64px;height:56px;padding:0 14px;border-radius:16px;border:1.5px solid rgba(255,255,255,.3);background:rgba(10,16,22,.55);color:#fff;font-weight:800;font-size:13px;backdrop-filter:blur(4px);touch-action:none;user-select:none;-webkit-user-select:none}
+#joyBase{pointer-events:auto;width:112px;height:112px;border-radius:50%;background:rgba(10,16,22,.35);border:1.5px solid rgba(255,255,255,.35);position:relative;touch-action:none;backdrop-filter:blur(3px)}
+#joyKnob{position:absolute;width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.92);left:31px;top:31px;box-shadow:0 4px 14px rgba(0,0,0,.35);display:grid;place-items:center;font-size:16px;color:#333}
+.btnCol{pointer-events:auto;display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+.btnRow{display:flex;gap:8px}
+.ctlBtn{min-width:62px;height:52px;padding:0 14px;border-radius:13px;border:1px solid rgba(255,255,255,.28);background:rgba(10,16,22,.62);color:#fff;font-weight:800;font-size:12.5px;letter-spacing:.03em;display:inline-flex;align-items:center;justify-content:center;gap:6px;box-shadow:0 4px 12px rgba(0,0,0,.25);backdrop-filter:blur(4px);touch-action:none;user-select:none;-webkit-user-select:none}
 .ctlBtn:active,.ctlBtn.on{background:var(--brand);border-color:var(--brand)}
-.ctlBtn.primary{background:var(--brand);border-color:var(--brand);min-width:84px;height:64px;font-size:14px}
-.ctlBtn.primary:disabled{background:rgba(10,16,22,.35);border-color:rgba(255,255,255,.2);opacity:.55}
-.ctlBtn.small{min-width:52px;height:48px;font-size:12px}
+.ctlBtn.primary{background:var(--brand);border-color:var(--brand);min-width:98px;height:58px;font-size:13.5px;box-shadow:0 6px 16px rgba(230,74,18,.38)}
+.ctlBtn.primary:disabled{background:rgba(10,16,22,.4);border-color:rgba(255,255,255,.18);opacity:.5;box-shadow:none}
+.ctlBtn.small{min-width:58px;height:50px;padding:0 8px;flex-direction:column;gap:2px;font-size:10px;letter-spacing:.07em}
+.ctlBtn.small .ic{font-size:15px;line-height:1}
 /* Toast + prompt */
 #toast{position:absolute;left:50%;bottom:calc(210px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(10px);background:#101820;color:#fff;padding:10px 16px;border-radius:999px;font-size:13px;font-weight:700;opacity:0;transition:.3s;z-index:9;pointer-events:none;max-width:92vw;text-align:center}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 #interactHint{position:absolute;left:50%;bottom:calc(196px + env(safe-area-inset-bottom));transform:translateX(-50%);background:var(--brand);color:#fff;font-weight:800;font-size:13px;padding:9px 16px;border-radius:999px;z-index:7;display:none;box-shadow:0 8px 20px rgba(0,0,0,.3)}
 /* Screens */
 .screen{position:absolute;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:16px;background:linear-gradient(180deg,rgba(8,14,20,.55),rgba(8,14,20,.82));overflow:auto}
-.sheet{background:var(--panel);border-radius:22px;max-width:520px;width:100%;padding:22px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
-.sheet h1{font-size:26px;margin:0 0 4px;line-height:1.15}
-.sheet h2{font-size:19px;margin:0 0 8px}
-.sheet p{color:var(--muted);font-size:14px;line-height:1.55;margin:6px 0}
-.tag{display:inline-block;background:#fff1ea;color:var(--brand-dark);font-weight:800;font-size:11px;letter-spacing:.07em;text-transform:uppercase;padding:5px 10px;border-radius:999px}
+.sheet{background:var(--panel);border-radius:18px;max-width:460px;width:100%;padding:20px;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.sheet h1{font-size:23px;margin:0 0 4px;line-height:1.15;letter-spacing:-.01em}
+.sheet h2{font-size:18px;margin:0 0 8px}
+.sheet p{color:var(--muted);font-size:13.5px;line-height:1.5;margin:4px 0}
+.tag{display:inline-block;background:#fff1ea;color:var(--brand-dark);font-weight:800;font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;padding:4px 9px;border-radius:999px}
 @media (prefers-color-scheme: dark){.tag{background:#3a241a;color:#ffb59a}}
-.bigBtn{display:block;width:100%;min-height:52px;border:none;border-radius:14px;background:var(--brand);color:#fff;font-weight:800;font-size:15px;margin-top:10px}
-.bigBtn:active{background:var(--brand-dark)}
-.ghostBtn{display:block;width:100%;min-height:48px;border:1.5px solid var(--line);border-radius:14px;background:var(--panel);color:var(--ink);font-weight:700;font-size:14px;margin-top:8px}
-.howGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-.howGrid div{background:var(--panel2);border-radius:12px;padding:10px;font-size:12.5px;line-height:1.5}
-.howGrid b{display:block;font-size:13px}
+.bigBtn{display:block;width:100%;min-height:50px;border:none;border-radius:12px;background:var(--brand);color:#fff;font-weight:800;font-size:14.5px;letter-spacing:.03em;margin-top:12px;box-shadow:0 8px 20px rgba(230,74,18,.32);transition:background .15s,transform .1s}
+.bigBtn:hover{background:var(--brand-dark)}
+.bigBtn:active{background:var(--brand-dark);transform:scale(.99)}
+.ghostBtn{display:block;width:100%;min-height:46px;border:1.5px solid var(--line);border-radius:12px;background:var(--panel);color:var(--ink);font-weight:700;font-size:13.5px;margin-top:8px;transition:border-color .15s,background .15s}
+.ghostBtn:hover{border-color:var(--brand);background:var(--panel2)}
+.howGrid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}
+.howGrid div{background:var(--panel2);border-radius:10px;padding:8px 10px;font-size:12px;line-height:1.45}
+.howGrid b{display:block;font-size:12.5px;margin-bottom:1px}
 .kv{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px}
 .kv b{font-weight:800}
 .hidden{display:none!important}
@@ -94,11 +99,11 @@ button{font-family:inherit;cursor:pointer}
 input[type=file]{display:none}
 @media (max-width:560px){
   #minimapWrap{display:none}
-  .mission{top:calc(112px + env(safe-area-inset-top))}
-  .speedo{bottom:calc(196px + env(safe-area-inset-bottom))}
+  .mission{top:calc(96px + env(safe-area-inset-top))}
+  .speedo{bottom:calc(186px + env(safe-area-inset-bottom))}
 }
 @media (min-width:900px){
-  #joyBase{width:140px;height:140px} #joyKnob{left:42px;top:42px}
+  #joyBase{width:128px;height:128px} #joyKnob{left:39px;top:39px}
 }
 </style>
 </head>
@@ -121,11 +126,16 @@ input[type=file]{display:none}
 
     <div class="hud mission">
       <div class="missionCard">
-        <div class="step" id="uiStep">Misi 1 dari 6</div>
+        <div class="mHead">
+          <span class="step" id="uiStep">Misi 1 dari 6</span>
+          <span class="mDist" id="uiDist">0 m</span>
+        </div>
         <div class="title" id="uiMission">Masuk ke gudang</div>
         <div class="desc" id="uiMissionDesc">Ikuti panah penunjuk. Gudang ada di depanmu — masuk lewat pintu besar yang terbuka.</div>
-        <div class="bar"><i id="uiProgress" style="width:8%"></i></div>
-        <div class="distRow"><span id="uiTarget">🎯 Gudang Ekspedisi</span><span id="uiDist">0 m</span></div>
+        <div class="mFoot">
+          <span class="tgt" id="uiTarget">🎯 Gudang Ekspedisi</span>
+          <div class="bar"><i id="uiProgress" style="width:8%"></i></div>
+        </div>
       </div>
     </div>
 
@@ -146,9 +156,9 @@ input[type=file]{display:none}
       <div id="joyBase"><div id="joyKnob">✥</div></div>
       <div class="btnCol">
         <div class="btnRow">
-          <button class="ctlBtn small" id="btnHorn">📯<br>KLAKSON</button>
-          <button class="ctlBtn small" id="btnBrake">🛑<br>REM</button>
-          <button class="ctlBtn small" id="btnGas">⚡<br>GAS</button>
+          <button class="ctlBtn small" id="btnHorn"><span class="ic" aria-hidden="true">📯</span><span>KLAKSON</span></button>
+          <button class="ctlBtn small" id="btnBrake"><span class="ic" aria-hidden="true">🛑</span><span>REM</span></button>
+          <button class="ctlBtn small" id="btnGas"><span class="ic" aria-hidden="true">⚡</span><span>GAS</span></button>
         </div>
         <div class="btnRow">
           <button class="ctlBtn" id="btnMount">🏍️ NAIK MOTOR</button>
@@ -160,23 +170,23 @@ input[type=file]{display:none}
     <!-- START SCREEN -->
     <div class="screen" id="startScreen">
       <div class="sheet">
-        <span class="tag">Vertical Slice • Milestone 1</span>
+        <span class="tag">Simulator Kurir 3D</span>
         <h1>Courier Life Simulator 3D</h1>
-        <p>Jadilah kurir ekspedisi di kota kecil Indonesia. Ambil paket di gudang, naik motor, antar ke rumah pelanggan, terima COD, dan kumpulkan upah + XP untuk naik level.</p>
+        <p>Ambil paket di gudang, antar ke pelanggan, terima COD, dan kumpulkan upah untuk naik level.</p>
         <div class="howGrid">
-          <div><b>🕹️ Bergerak</b>Joystick kiri (HP) atau WASD / panah (desktop). Shift untuk lari.</div>
-          <div><b>🏍️ Motor</b>Dekati motor lalu tekan NAIK MOTOR (atau F). Gas ⚡, Rem 🛑, belok pakai joystick.</div>
-          <div><b>👆 Interaksi</b>Tombol INTERAKSI (atau E) untuk scan paket, serah terima &amp; COD.</div>
-          <div><b>🧭 Navigasi</b>Ikuti panah oranye di dunia &amp; jarak di kartu misi. Minimap di kanan atas.</div>
+          <div><b>🕹️ Bergerak</b>Joystick kiri / WASD</div>
+          <div><b>🏍️ Motor</b>Tombol NAIK MOTOR, gas &amp; rem di kanan</div>
+          <div><b>👆 Interaksi</b>Tombol INTERAKSI (E) untuk scan &amp; serah terima</div>
+          <div><b>🧭 Navigasi</b>Ikuti panah oranye &amp; kartu misi</div>
         </div>
-        <button class="bigBtn" id="btnNew">▶ MULAI SHIFT BARU</button>
-        <button class="ghostBtn" id="btnContinue">↩ LANJUTKAN PROGRES TERSIMPAN</button>
+        <button class="bigBtn" id="btnNew">MULAI SHIFT BARU</button>
+        <button class="ghostBtn" id="btnContinue">LANJUTKAN PROGRES</button>
         <div class="seg" role="group" aria-label="Kualitas grafis">
           <button data-q="low">Grafis Hemat</button>
           <button data-q="med" class="sel">Grafis Sedang</button>
           <button data-q="high">Grafis Tinggi</button>
         </div>
-        <p class="legend">Satu pengiriman penuh: gudang → sortir &amp; scan → muat ke motor → berkendara → parkir → serah terima + COD → kembali ke gudang → tutup manifest.<br>Progres sesi bisa diekspor sebagai file simpanan dan diimpor lagi kapan pun.</p>
+        <p class="legend">Progres dapat disimpan &amp; diekspor dari menu jeda (⏸️) di kanan atas.</p>
       </div>
     </div>
 
